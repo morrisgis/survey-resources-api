@@ -1,0 +1,227 @@
+﻿@model IEnumerable<WebApplication1.Models.SurveyResource>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ResourceType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SurveySource)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SurveyCoordinateSystem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SurveyTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PresentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AliasNames)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SurveyDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrimaryMuniId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SurveySiteGeneralAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SurveyDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsPublicLandholderInterest)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CoClerkFileNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CoClerkBookNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CoClerkPageNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DevReviewNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PosiUnitId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GreenAcresSurveyId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OtherSurveyId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OstfProjectId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrigSurveyId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MetaCreationDateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HasValidSurveyDocument)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HasValidBaseSurvey)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HasValidSurveyParcelsLink)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HasValidLandholderInterests)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BaseMapUpdateStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NoParcelSurvey)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cogoreport)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastEditor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastEditDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TestTimeStamp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NewFilename)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResourceType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SurveySource)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SurveyCoordinateSystem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SurveyTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PresentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AliasNames)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SurveyDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrimaryMuniId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SurveySiteGeneralAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SurveyDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsPublicLandholderInterest)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CoClerkFileNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CoClerkBookNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CoClerkPageNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DevReviewNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PosiUnitId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GreenAcresSurveyId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OtherSurveyId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OstfProjectId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrigSurveyId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MetaCreationDateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasValidSurveyDocument)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasValidBaseSurvey)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasValidSurveyParcelsLink)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasValidLandholderInterests)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BaseMapUpdateStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoParcelSurvey)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cogoreport)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastEditor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastEditDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TestTimeStamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NewFilename)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.SurveyId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.SurveyId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.SurveyId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

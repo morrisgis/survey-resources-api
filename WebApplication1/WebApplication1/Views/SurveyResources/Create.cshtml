@@ -1,0 +1,193 @@
+﻿@model WebApplication1.Models.SurveyResource
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>SurveyResource</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SurveyId" class="control-label"></label>
+                <input asp-for="SurveyId" class="form-control" />
+                <span asp-validation-for="SurveyId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ResourceType" class="control-label"></label>
+                <input asp-for="ResourceType" class="form-control" />
+                <span asp-validation-for="ResourceType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SurveySource" class="control-label"></label>
+                <input asp-for="SurveySource" class="form-control" />
+                <span asp-validation-for="SurveySource" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SurveyCoordinateSystem" class="control-label"></label>
+                <input asp-for="SurveyCoordinateSystem" class="form-control" />
+                <span asp-validation-for="SurveyCoordinateSystem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SurveyTitle" class="control-label"></label>
+                <input asp-for="SurveyTitle" class="form-control" />
+                <span asp-validation-for="SurveyTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PresentName" class="control-label"></label>
+                <input asp-for="PresentName" class="form-control" />
+                <span asp-validation-for="PresentName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AliasNames" class="control-label"></label>
+                <input asp-for="AliasNames" class="form-control" />
+                <span asp-validation-for="AliasNames" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SurveyDate" class="control-label"></label>
+                <input asp-for="SurveyDate" class="form-control" />
+                <span asp-validation-for="SurveyDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrimaryMuniId" class="control-label"></label>
+                <input asp-for="PrimaryMuniId" class="form-control" />
+                <span asp-validation-for="PrimaryMuniId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SurveySiteGeneralAddress" class="control-label"></label>
+                <input asp-for="SurveySiteGeneralAddress" class="form-control" />
+                <span asp-validation-for="SurveySiteGeneralAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SurveyDescription" class="control-label"></label>
+                <input asp-for="SurveyDescription" class="form-control" />
+                <span asp-validation-for="SurveyDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsPublicLandholderInterest" /> @Html.DisplayNameFor(model => model.IsPublicLandholderInterest)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="CoClerkFileNumber" class="control-label"></label>
+                <input asp-for="CoClerkFileNumber" class="form-control" />
+                <span asp-validation-for="CoClerkFileNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CoClerkBookNumber" class="control-label"></label>
+                <input asp-for="CoClerkBookNumber" class="form-control" />
+                <span asp-validation-for="CoClerkBookNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CoClerkPageNumber" class="control-label"></label>
+                <input asp-for="CoClerkPageNumber" class="form-control" />
+                <span asp-validation-for="CoClerkPageNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DevReviewNumber" class="control-label"></label>
+                <input asp-for="DevReviewNumber" class="form-control" />
+                <span asp-validation-for="DevReviewNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PosiUnitId" class="control-label"></label>
+                <input asp-for="PosiUnitId" class="form-control" />
+                <span asp-validation-for="PosiUnitId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GreenAcresSurveyId" class="control-label"></label>
+                <input asp-for="GreenAcresSurveyId" class="form-control" />
+                <span asp-validation-for="GreenAcresSurveyId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OtherSurveyId" class="control-label"></label>
+                <input asp-for="OtherSurveyId" class="form-control" />
+                <span asp-validation-for="OtherSurveyId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OstfProjectId" class="control-label"></label>
+                <input asp-for="OstfProjectId" class="form-control" />
+                <span asp-validation-for="OstfProjectId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrigSurveyId" class="control-label"></label>
+                <input asp-for="OrigSurveyId" class="form-control" />
+                <span asp-validation-for="OrigSurveyId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comment" class="control-label"></label>
+                <input asp-for="Comment" class="form-control" />
+                <span asp-validation-for="Comment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MetaCreationDateTime" class="control-label"></label>
+                <input asp-for="MetaCreationDateTime" class="form-control" />
+                <span asp-validation-for="MetaCreationDateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="HasValidSurveyDocument" /> @Html.DisplayNameFor(model => model.HasValidSurveyDocument)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="HasValidBaseSurvey" /> @Html.DisplayNameFor(model => model.HasValidBaseSurvey)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="HasValidSurveyParcelsLink" /> @Html.DisplayNameFor(model => model.HasValidSurveyParcelsLink)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="HasValidLandholderInterests" /> @Html.DisplayNameFor(model => model.HasValidLandholderInterests)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="BaseMapUpdateStatus" class="control-label"></label>
+                <input asp-for="BaseMapUpdateStatus" class="form-control" />
+                <span asp-validation-for="BaseMapUpdateStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="NoParcelSurvey" /> @Html.DisplayNameFor(model => model.NoParcelSurvey)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cogoreport" class="control-label"></label>
+                <input asp-for="Cogoreport" class="form-control" />
+                <span asp-validation-for="Cogoreport" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastEditor" class="control-label"></label>
+                <input asp-for="LastEditor" class="form-control" />
+                <span asp-validation-for="LastEditor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastEditDate" class="control-label"></label>
+                <input asp-for="LastEditDate" class="form-control" />
+                <span asp-validation-for="LastEditDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NewFilename" class="control-label"></label>
+                <input asp-for="NewFilename" class="form-control" />
+                <span asp-validation-for="NewFilename" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

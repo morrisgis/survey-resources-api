@@ -1,0 +1,131 @@
+﻿@model IEnumerable<WebApplication1.Models.SurveyDocument>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SurveySource)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DocumentType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FileName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FolderPath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FileExtension)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.McgisUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HasWorldFile)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HasTraverse)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrigFilePath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExternalUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrigSurveyId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastEditor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastEditDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TempTimestamp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TempFileName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TempHasMatch)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Survey)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SurveySource)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DocumentType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FileName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FolderPath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FileExtension)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.McgisUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasWorldFile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasTraverse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrigFilePath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExternalUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrigSurveyId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastEditor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastEditDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TempTimestamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TempFileName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TempHasMatch)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Survey.SurveyId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.DocumentId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.DocumentId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.DocumentId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
