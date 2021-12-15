@@ -10104,11 +10104,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dbouchard\\source\\repos\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
-      "projectName": "WebApplication1",
-      "projectPath": "C:\\Users\\dbouchard\\source\\repos\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "C:\\Users\\dbouchard\\Documents\\Repos\\survey-resources-api\\WebApplication1\\WebApplication1\\SurveyResourcesAPI.csproj",
+      "projectName": "SurveyResourcesAPI",
+      "projectPath": "C:\\Users\\dbouchard\\Documents\\Repos\\survey-resources-api\\WebApplication1\\WebApplication1\\SurveyResourcesAPI.csproj",
       "packagesPath": "C:\\Users\\dbouchard\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dbouchard\\source\\repos\\WebApplication1\\WebApplication1\\obj\\",
+      "outputPath": "C:\\Users\\dbouchard\\Documents\\Repos\\survey-resources-api\\WebApplication1\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dbouchard\\AppData\\Roaming\\NuGet\\NuGet.Config",
