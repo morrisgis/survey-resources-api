@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WebApplication1.Models;
+using SurveyResourcesAPI.Models;
 
-namespace WebApplication1.Controllers
+namespace SurveyResourcesAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
