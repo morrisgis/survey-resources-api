@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
+using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,9 +34,24 @@ namespace SurveyResourcesAPI
             services.AddDbContext<Models.SurveyResourcesContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("GISConnection")));
             services.AddControllers();
-            services.AddSwaggerGen(c =>
+
+            services.AddSwaggerGen(options =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "SurveyResourcesAPI", Version = "v1" });
+                options.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "SurveyResourcesAPI",
+                    Description = "An ASP.NET Core Web API for managing Survey Resources",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Survey Resource API Administrator",
+                        Url = new Uri("https://morrisgisapps.co.morris.nj.us")
+                       
+                    }
+                });
+                // using System.Reflection;
+                var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
             });
 
             string[] hsts = Configuration.GetSection("CORSConfiguration:AllowedHosts").Get<string[]>();
@@ -58,14 +75,19 @@ namespace SurveyResourcesAPI
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SurveyResourcesAPI v1"));
+
             }
+            
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SurveyResourcesAPI v1"));
+                  
 
             app.UseDeveloperExceptionPage();
 
             app.UseHttpsRedirection();
-
+            
+            app.UseStaticFiles();
+            
             app.UseRouting();
 
             app.UseAuthorization();
