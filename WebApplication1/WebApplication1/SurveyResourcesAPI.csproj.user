@@ -14,5 +14,10 @@
     <_SelectedScaffolderID>ApiControllerWithContextScaffolder</_SelectedScaffolderID>
     <_SelectedScaffolderCategoryPath>root/Common/Api</_SelectedScaffolderCategoryPath>
     <WebStackScaffolding_DbContextDialogWidth>650</WebStackScaffolding_DbContextDialogWidth>
+    <NameOfLastUsedPublishProfile>C:\_workfiles\repos\survey-resources-api\WebApplication1\WebApplication1\Properties\PublishProfiles\Folder_Release-Production.pubxml</NameOfLastUsedPublishProfile>
+    <ActiveDebugProfile>WebApplication1</ActiveDebugProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UAT|x64'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

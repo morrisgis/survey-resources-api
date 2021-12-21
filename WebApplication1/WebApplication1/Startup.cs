@@ -72,15 +72,28 @@ namespace SurveyResourcesAPI
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+            app.UseSwagger();
             if (env.IsDevelopment())
             {
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/apis/survey-resources-api-dev/swagger/v1/swagger.json", "SurveyResourcesAPI v1"));
                 app.UseDeveloperExceptionPage();
 
             }
-            
-            app.UseSwagger();
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SurveyResourcesAPI v1"));
-                  
+            if (env.IsEnvironment("UAT"))
+            {
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/apis/survey-resources-api-uat/swagger/v1/swagger.json", "SurveyResourcesAPI v1"));
+             
+
+            }
+
+            if (env.IsEnvironment("Production"))
+            {
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/apis/survey-resources/swagger/v1/swagger.json", "SurveyResourcesAPI v1"));
+           
+
+            }
+
 
             app.UseDeveloperExceptionPage();
 
