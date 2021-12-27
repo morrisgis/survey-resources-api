@@ -76,6 +76,8 @@ namespace SurveyResourcesAPI
             app.UseSwagger();
             if (env.IsDevelopment())
             {
+
+           
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/apis/survey-resources-api-dev/swagger/v1/swagger.json", "SurveyResourcesAPI v1"));
                 app.UseDeveloperExceptionPage();
 
